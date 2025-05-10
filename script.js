@@ -1,15 +1,12 @@
 let oldNumber='';
 let newNumber='';
-let newOprator='';
+let Oprator='';
 let result='';
-let isfloat=false;
 
 function addNumber(Number) {
-    if(newOprator==='') {
+    if(Oprator==='') {
         document.getElementById("screen").value += Number;
         oldNumber+=Number;
-
-        return oldNumber;
     }
     else  {
         if(newNumber===''){
@@ -17,23 +14,22 @@ function addNumber(Number) {
         }
         document.getElementById("screen").value+=Number;
         newNumber+=Number;
-        return newNumber;
     }
 }
 
 function clearscreen() {
     document.getElementById("screen").value = '';
     oldNumber='';
-    newOprator='';
+    Oprator='';
     newNumber='';
 }
 
 function opration(oprator) {
-    newOprator = oprator;
+    Oprator = oprator;
 }
 
 function answer() {
-    if(newOprator!=='' && newNumber === '') {
+    if(Oprator!=='' && newNumber === '') {
         alert("Syntax ERROR!!!");
     }
     else {
@@ -41,7 +37,7 @@ function answer() {
         let a = parseFloat(oldNumber);
         let b = parseFloat(newNumber);
         
-        switch (newOprator) {
+        switch (Oprator) {
             case '/':
                 if(b===0) {
                     alert("can't divid by 0");
@@ -64,12 +60,7 @@ function answer() {
             
         oldNumber = result.toString();
         newNumber='';
-        newOprator='';
+        Oprator='';
     }
     document.getElementById("screen").value = oldNumber;
-}
-
-function floating() {
-    isfloat=true;
-    document.getElementById("screen").value += '.'
 }
