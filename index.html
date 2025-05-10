@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="mbody">
+        <table class="calcu">
+            <tr>
+                <td colspan="3"><input type="tel" name="screen" id="screen"></td>
+                <td><button onclick="clearscreen()">C</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="addNumber('7')">7</button></td>
+                <td><button onclick="addNumber('8')">8</button></td>
+                <td><button onclick="addNumber('9')">9</button></td>
+                <td class="oprator"><button onclick="opration('/')">/</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="addNumber('4')">4</button></td>
+                <td><button onclick="addNumber('5')">5</button></td>
+                <td><button onclick="addNumber('6')">6</button></td>
+                <td class="oprator"><button onclick="opration('*')">*</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="addNumber('1')">1</button></td>
+                <td><button onclick="addNumber('2')">2</button></td>
+                <td><button onclick="addNumber('3')">3</button></td>
+                <td class="oprator"><button onclick="opration('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="addNumber('0')">0</button></td>
+                <td class="float"><button onclick="floating('.')">.</button></td>
+                <td class="answer"><button onclick="answer('=')">=</button></td>
+                <td class="oprator"><button onclick="opration('+')">+</button></td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
