@@ -9,9 +9,6 @@ function addNumber(Number) {
         oldNumber+=Number;
     }
     else  {
-        if(newNumber===''){
-            document.getElementById("screen").value='';
-        }
         document.getElementById("screen").value+=Number;
         newNumber+=Number;
     }
@@ -25,7 +22,14 @@ function clearscreen() {
 }
 
 function opration(oprator) {
+    if(Oprator!=='' && newNumber!=='') {
+        answer();
+    }
+    else if(Oprator!=='' && newNumber===''){
+        document.getElementById("screen").value = document.getElementById("screen").value.slice(0, -1);
+    }
     Oprator = oprator;
+    document.getElementById("screen").value+=Oprator;
 }
 
 function answer() {
